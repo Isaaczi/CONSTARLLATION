@@ -1,0 +1,88 @@
+/*Globales*/
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+  background: radial-gradient(#242834 10%, #0d1322 100%);
+}
+
+@keyframes encogimiento {
+  100% {
+    font-size: 0.1rem;
+    color: white;
+  }
+}
+@keyframes destello {
+  20% {
+    color: white;
+  }
+}
+#particles-js {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.animation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vh;
+  animation-name: encogimiento;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
+  position: relative;
+  z-index: 99;
+  margin: auto;
+  visibility: hidden;
+}
+.animation-container .constarllation {
+  display: block;
+  color: transparent;
+  font-size: 10rem;
+  letter-spacing: 3rem;
+  animation-name: encogimiento;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
+}
+.animation-container .constarllation .s {
+  animation-name: destello;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+.animation-container .constarllation .t {
+  animation-name: destello;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+}
+.animation-container .constarllation .a {
+  animation-name: destello;
+  animation-duration: 2s;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+}
+.animation-container .constarllation .r {
+  animation-name: destello;
+  animation-duration: 1.7s;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+}
+
+.get-in-container {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,4 +1,5 @@
-let settings1 = {
+
+let settings = {
   "particles": {
     "number": {
       "value": 160,
@@ -109,31 +110,11 @@ let settings1 = {
   "retina_detect": true
 }
 
-let identificadorTiempoDeEspera;
+const getIn = document.querySelector(`.get-in-container`);
+const animation = document.querySelector(`.animation-container`);
 
-function temporizadorDeRetraso(tiempo) {
-  identificadorTiempoDeEspera = setTimeout(funcionConRetraso, tiempo);
-}
 
-function funcionConRetraso() {
-  // alert("Han pasado 3 segundos.");
-    particlesJS(settings1);
-}
-
-temporizadorDeRetraso(5000);
-
-// particlesJS(settings);
-
-function temporizadorDeRetraso2(tiempo) {
-  identificadorTiempoDeEspera = setTimeout(funcionConRetraso2, tiempo);
-}
-// function funcionConRetraso2() {
-//   let button = document.querySelector(`.button`);
-//   let icon = document.querySelector(`.icon`);
-//   let buttonText = document.querySelector(`.buttonText`);
-//   button.removeAttribute(`hidden`);
-//   icon.removeAttribute(`hidden`);
-//   buttonText.removeAttribute(`hidden`);
-// }
-
-// temporizadorDeRetraso2(6000);
+setTimeout(() => {
+  particlesJS(settings);
+  getIn.classList.add(`visible`);
+}, 5000);
