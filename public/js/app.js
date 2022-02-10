@@ -110,11 +110,11 @@ let settings = {
   "retina_detect": true
 }
 
-const getIn = document.querySelector(`.get-in-container`);
 const animation = document.querySelector(`.animation-container`);
 
 
 setTimeout(() => {
   particlesJS(settings);
-  getIn.classList.add(`visible`);
-}, 5000);
+  animation.innerHTML = "";
+  animation.style.height = 0;
+}, 6000);

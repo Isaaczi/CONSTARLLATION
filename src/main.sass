@@ -20,7 +20,7 @@
     position: relative
     z-index: 99
     margin: auto
-    visibility: hidden
+    transition: 1s
     .constarllation
         display: block
         color: transparent
@@ -49,7 +49,19 @@
             animation-timing-function: linear
 
 .get-in-container
-    visibility: hidden
-
-.visible
-    visibility: visible
+    margin: 10%
+    display: flex
+    flex-direction: column
+    font-size: 2.5rem
+    .phrase
+        color: #dddddd
+    .button
+        padding: 3rem
+        width: max-content
+        text-decoration: none
+        color: white
+        text-shadow: 0 0 1rem white
+        animation-name: destello2 
+        animation-duration: 3s
+        animation-timing-function: linear
+        animation-iteration-count: infinite

@@ -11,6 +11,7 @@ html {
 body {
   font-size: 16px;
   background: radial-gradient(#242834 10%, #0d1322 100%);
+  overflow: hidden;
 }
 
 @keyframes encogimiento {
@@ -22,6 +23,20 @@ body {
 @keyframes destello {
   20% {
     color: white;
+  }
+}
+@keyframes destello2 {
+  75% {
+    color: white;
+    text-shadow: 0 0 1rem white;
+  }
+  95% {
+    color: gray;
+    text-shadow: 0 0 1rem gray;
+  }
+  100% {
+    color: white;
+    text-shadow: 0 0 1rem white;
   }
 }
 #particles-js {
@@ -43,7 +58,7 @@ body {
   position: relative;
   z-index: 99;
   margin: auto;
-  visibility: hidden;
+  transition: 1s;
 }
 .animation-container .constarllation {
   display: block;
@@ -78,11 +93,24 @@ body {
 }
 
 .get-in-container {
-  visibility: hidden;
+  margin: 10%;
+  display: flex;
+  flex-direction: column;
+  font-size: 2.5rem;
 }
-
-.visible {
-  visibility: visible;
+.get-in-container .phrase {
+  color: #dddddd;
+}
+.get-in-container .button {
+  padding: 3rem;
+  width: max-content;
+  text-decoration: none;
+  color: white;
+  text-shadow: 0 0 1rem white;
+  animation-name: destello2;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 /*# sourceMappingURL=styles.css.map */
